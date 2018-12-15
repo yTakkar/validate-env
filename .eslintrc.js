@@ -3,7 +3,11 @@ module.exports = {
     "es6": true,
     "node": true
   },
-  "extends": "eslint:recommended",
+  "extends": [
+    "eslint:recommended",
+    'plugin:prettier/recommended',
+  ],
+  "plugins": ["prettier"],
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module"
@@ -29,5 +33,12 @@ module.exports = {
     'no-ternary': 0,
     'no-nested-ternary': 0,
     'multiline-ternary': 0,
+    'prettier/prettier': [
+      'error', {
+        singleQuote: true,
+        semi: false,
+        trailingComma: 'es5'
+      }
+    ]
   }
 };
