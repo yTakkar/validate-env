@@ -17,7 +17,7 @@ npm i @takkar/validate-env -g
   name
   age
   city
-  country yarn global add validate-env
+  country
   ```
 
   Now, `validate-env` will validate your env files against these keys.
