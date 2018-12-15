@@ -1,6 +1,6 @@
 {
   "name": "@takkar/validate-env",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Validate your env files",
   "keywords": [
     "env",
