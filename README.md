@@ -1,5 +1,5 @@
-# Validate-Env
-Validate your env files.
+# validate-env
+CLI tool to validate your env files.
 
 # Demo
 ![alt text](https://raw.githubusercontent.com/yTakkar/validate-env/master/example/example.gif)
