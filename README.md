@@ -7,7 +7,7 @@ Validate your env files.
 #Usage
 1. Installation [You can install it as a dev-dependency also].
 ```bash
-npm i validate-env -g
+npm i @takkar/validate-env -g
 ```
 
 2. Now create a sample env file with keys your think should be available in your env files.
