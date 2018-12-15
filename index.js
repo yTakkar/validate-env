@@ -42,5 +42,5 @@ if (emptyKeys.length) {
     warn(`"${key}" key ${mismatchType} in "${argv.env}" file!`)
   })
 } else {
-  success('No keys misimatched. You\'re good to to :)') // eslint-disable-line prettier/prettier
+  success('No keys mismatched. You\'re good to to :)') // eslint-disable-line prettier/prettier
 }
