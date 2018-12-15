@@ -1,7 +1,8 @@
 {
-  "name": "validate-env",
+  "name": "@takkar/validate-env",
   "version": "1.0.0",
   "description": "Validate your env files",
+  "keywords": ["env", "validate", "configuration"],
   "main": "index.js",
   "scripts": {
     "example:validate": "./index.js --sample example/.env.sample --env example/.env.development"
