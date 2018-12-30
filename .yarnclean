@@ -40,8 +40,6 @@ wercker.yml
 .documentup.json
 .yarn-metadata.json
 .travis.yml
-.vscode
 
-LICENSE
 # misc
 *.md
