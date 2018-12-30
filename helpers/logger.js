@@ -4,14 +4,14 @@ const colorsByType = {
   info: chalk.blue,
   warn: chalk.green,
   error: chalk.bgRed,
-  success: chalk.hex('##f1a550').bold
+  success: chalk.hex('#f1a550').bold,
 }
 
 const emojisByType = {
   info: 'ℹ',
   warn: '⚠️',
   error: '❌',
-  success: '✅ ️️'
+  success: '✅ ️️',
 }
 
 const log = type => mssg => {
@@ -25,7 +25,7 @@ module.exports = {
   warn: log('warn'),
   error: mssg => {
     log('error')(mssg)
-    process.exit(1)
+    process.env.NODE_ENV !== 'test' && process.exit(1)
   },
-  success: log('success')
+  success: log('success'),
 }

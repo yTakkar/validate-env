@@ -12,6 +12,11 @@ module.exports = {
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
+  "globals": {
+    'describe': true,
+    'it': true,
+    'expect': true
+  },
   "rules": {
     "indent": [
       "error",

@@ -9,7 +9,9 @@
   ],
   "main": "index.js",
   "scripts": {
-    "example:validate": "./index.js --sample example/.env.sample --env example/.env.development"
+    "example:validate": "./index.js --sample example/.env.sample --env example/.env.development",
+    "lint": "eslint --max-warnings=0 helpers index.js",
+    "test": "yarn lint && NODE_ENV=test jest"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,8 @@
     "eslint": "^5.10.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-prettier": "^3.0.0",
+    "jest": "^23.6.0",
+    "jest-watch-typeahead": "^0.2.0",
     "prettier": "^1.15.3"
   },
   "bin": "index.js"
