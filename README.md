@@ -1,15 +1,20 @@
 # validate-env
 CLI tool to validate your env files.
 
-#Usage
-1. Installation [You can install it as a dev-dependency also].
-```bash
-npm i @takkar/validate-env -g
-```
+[![Build Status](https://travis-ci.com/yTakkar/validate-env.svg?branch=master)](https://travis-ci.com/yTakkar/validate-env)
 
-2. Now create a sample env file with keys your think should be available in your env files.
-    
-  For example.
+![alt text][logo]
+
+[logo]: https://i.ibb.co/MGLG39F/carbon-1.png "Demo"
+
+# Installation
+```bash
+  yarn add @takkar/validate-env -dev
+  ```
+
+# Usage
+
+1. Now create a sample env file with keys your think should be available in your env files. For eg. `config/.env.sample` .   
   ```js
   name
   age
@@ -17,19 +22,18 @@ npm i @takkar/validate-env -g
   country
   ```
 
-  Now, `validate-env` will validate your env file against these keys.
+  Now, `validate-env` will validate your env file against these keys. Let's say we wanna validate `.env.development`.
 
-3. Use it.
-```bash
-validate-env --sample path-to-env-sample-file --env path-to-your-env-file
+2. Run the command.
+  ```bash
+  validate-env --sample config/.env.sample --env .env.development
+  ```
+
+# API
 ```
+validate-env [options]
 
-If you've installed it as a `devDependency`,
-```bash
-./node_modules/.bin/validate-env  --sample path-to-env-sample-file --env path-to-your-env-file
-```
-
-# Example
-```bash
-validate-env --sample config/.env.sample --env ./.env.development
+Options:
+    --sample     Sample env file with keys you think should be available in all env files.
+    --env  A env file to check
 ```
