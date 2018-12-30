@@ -1,9 +1,6 @@
 # validate-env
 CLI tool to validate your env files.
 
-# Demo
-![alt text](https://raw.githubusercontent.com/yTakkar/validate-env/master/example/example.gif)
-
 #Usage
 1. Installation [You can install it as a dev-dependency also].
 ```bash
@@ -20,7 +17,7 @@ npm i @takkar/validate-env -g
   country
   ```
 
-  Now, `validate-env` will validate your env files against these keys.
+  Now, `validate-env` will validate your env file against these keys.
 
 3. Use it.
 ```bash
