@@ -11,7 +11,8 @@
   "scripts": {
     "example:validate": "./index.js --sample example/.env.sample --env example/.env.development",
     "lint": "eslint --max-warnings=0 helpers index.js",
-    "test": "yarn lint && NODE_ENV=test jest",
+    "test": "jest",
+    "ci": "yarn lint && NODE_ENV=test && yarn test",
     "codecov": "codecov"
   },
   "repository": {
