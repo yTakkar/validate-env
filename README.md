@@ -1,7 +1,8 @@
 # validate-env
 CLI tool to validate your env files.
 
-[![Build Status](https://travis-ci.com/yTakkar/validate-env.svg?branch=master)](https://travis-ci.com/yTakkar/validate-env)
+[![Build Status](https://travis-ci.com/yTakkar/validate-env.svg?branch=master)](https://travis-ci.com/yTakkar/validate-env)  [![](https://img.shields.io/github/license/yTakkar/validate-env.svg?style=flat-square)](https://github.com/yTakkar/validate-env) [![codecov](https://codecov.io/gh/yTakkar/validate-env/branch/master/graph/badge.svg)](https://codecov.io/gh/yTakkar/validate-env) [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/yTakkar/validate-env)
+
 
 ![alt text][logo]
 
