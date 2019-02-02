@@ -7,10 +7,10 @@
     "validate",
     "configuration"
   ],
-  "main": "index.js",
+  "main": "./build/index.js",
   "scripts": {
     "example:validate": "node ./build/index.js --sample example/.env.sample --env example/.env.development",
-    "lint": "tslint -c tslint.json -p . -e '(node_modules|build)'",
+    "lint": "tslint -c ./tslint.json 'src/**/*.ts' -e '(node_modules|build)'",
     "lint:fix": "tslint -p . --fix",
     "test": "jest",
     "ci": "yarn lint && NODE_ENV=test && yarn test",
