@@ -10,7 +10,7 @@
   "main": "./build/index.js",
   "scripts": {
     "example:validate": "node ./build/index.js --sample example/.env.sample --env example/.env.development",
-    "lint": "tslint -c ./tslint.json 'src/**/*.ts' -e '(node_modules|build)'",
+    "lint": "tslint -c ./tslint.json -p . -e '(node_modules|build)'",
     "lint:fix": "tslint -p . --fix",
     "test": "jest",
     "ci": "yarn lint && NODE_ENV=test && yarn test",
@@ -33,7 +33,6 @@
     "yargs": "^12.0.5"
   },
   "devDependencies": {
-    "@types/chalk": "^2.2.0",
     "@types/jest": "^23.3.13",
     "@types/node": "^10.12.21",
     "codecov": "^3.1.0",
