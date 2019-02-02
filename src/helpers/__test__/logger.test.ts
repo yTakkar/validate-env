@@ -1,4 +1,4 @@
-const log = require('../logger')
+import log from '../logger'
 
 describe('helpers/logger', () => {
   it('should run logging methods', () => {

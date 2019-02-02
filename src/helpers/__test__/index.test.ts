@@ -1,4 +1,4 @@
-const { diff, fileExists } = require('../index')
+import { diff, fileExists } from '../index'
 
 describe('helpers/index', () => {
   it('should return diff [elems present in first array1 but not in second]', () => {
@@ -10,6 +10,6 @@ describe('helpers/index', () => {
   it('should return if the provided file exists or not', () => {
     expect(fileExists('example/.env.development')).toBe(true)
     expect(fileExists('example/.env.invalid')).toBe(false)
-    expect(fileExists('helpers/logger.js')).toBe(true)
+    expect(fileExists('src/helpers/logger.ts')).toBe(true)
   })
 })

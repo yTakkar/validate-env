@@ -1,4 +1,5 @@
-const chalk = require('chalk')
+import chalk from 'chalk'
+import { ELogType } from '../types/index'
 
 const colorsByType = {
   info: chalk.blue,
@@ -14,18 +15,18 @@ const emojisByType = {
   success: '✅ ️️',
 }
 
-const log = type => mssg => {
+const log = (type: ELogType) => (mssg: string): void => {
   const colorFn = colorsByType[type]
   const emoji = emojisByType[type]
   console.log(colorFn(`${emoji} ${mssg}`))
 }
 
-module.exports = {
-  info: log('info'),
-  warn: log('warn'),
-  error: mssg => {
-    log('error')(mssg)
+export default {
+  info: log(ELogType.INFO),
+  warn: log(ELogType.WARN),
+  error: (mssg: string) => {
+    log(ELogType.ERROR)(mssg)
     process.env.NODE_ENV !== 'test' && process.exit(1)
   },
-  success: log('success'),
+  success: log(ELogType.SUCCESS),
 }

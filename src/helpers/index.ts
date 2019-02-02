@@ -1,4 +1,4 @@
-const { existsSync } = require('fs')
+import { existsSync } from 'fs'
 
 /**
  * Performs a check and returns a list of keys missing in array1 but present in array2
@@ -11,7 +11,7 @@ const { existsSync } = require('fs')
  * diff([1,2,3], [2,3]) :=> [1]
  * diff([1,2], [1,2]) :=> []
  */
-const diff = (array1, array2) => {
+export const diff = (array1: any[], array2: any[]): any[] => {
   return array1.reduce((arr, key) => {
     if (!array2.includes(key)) arr.push(key)
     return arr
@@ -24,9 +24,4 @@ const diff = (array1, array2) => {
  * @param {String} file File to check it's existence
  * @returns {Boolean} Returns a Boolean
  */
-const fileExists = file => existsSync(file)
-
-module.exports = {
-  diff,
-  fileExists,
-}
+export const fileExists = (file: string): boolean => existsSync(file)

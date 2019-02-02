@@ -1,17 +1,18 @@
 #!/usr/bin/env node
 
 const argv = require('yargs').argv
-const { warn, error, success, info } = require('./helpers/logger')
-const { diff, fileExists } = require('./helpers')
-const { mismatchedKeys, getEnvConfig } = require('./helpers/getEnvConfig')
+
+import { diff, fileExists } from './helpers/index'
+import log from './helpers/logger'
+import { mismatchedKeys, getEnvConfig } from './helpers/getEnvConfig'
 
 // Check if arguments are provided
-if (!argv.sample) error('Sample env file missing!')
-if (!argv.env) error('Env file to check missing!')
+if (!argv.sample) log.error('Sample env file missing!')
+if (!argv.env) log.error('Env file to check missing!')
 
 // Check if provided env files exists
-if (!fileExists(argv.sample)) error('Sample env file is not a valid file!')
-if (!fileExists(argv.env)) error('Env file is not a valid file!')
+if (!fileExists(argv.sample)) log.error('Sample env file is not a valid file!')
+if (!fileExists(argv.env)) log.error('Env file is not a valid file!')
 
 // Get Config from env files
 const sampleConfig = getEnvConfig(argv.sample)
@@ -35,12 +36,12 @@ const mKeys = mismatchedKeys(missingKeys, extraKeys)
 
 if (emptyKeys.length) {
   emptyKeys.forEach(emptyKey => {
-    info(`"${emptyKey}" key is empty in "${argv.env}" file!`)
+    log.info(`"${emptyKey}" key is empty in "${argv.env}" file!`)
   })
 } else if (mKeys.length) {
   mKeys.forEach(({ key, mismatchType }) => {
-    warn(`"${key}" key ${mismatchType} in "${argv.env}" file!`)
+    log.warn(`"${key}" key ${mismatchType} in "${argv.env}" file!`)
   })
 } else {
-  success('No keys mismatched. You\'re good to to :)') // eslint-disable-line prettier/prettier
+  log.success('No keys mismatched. You\'re good to to :)')
 }

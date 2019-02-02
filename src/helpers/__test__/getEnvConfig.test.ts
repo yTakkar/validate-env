@@ -1,4 +1,4 @@
-const { getEnvConfig, mismatchedKeys } = require('../getEnvConfig')
+import { getEnvConfig, mismatchedKeys } from '../getEnvConfig'
 
 describe('helpers/getEnvConfig', () => {
   it('should return env entries from example/.env.development', () => {
@@ -30,7 +30,7 @@ describe('helpers/getEnvConfig', () => {
     const extra = ['continent', 'collegeName']
     const mismatched = mismatchedKeys(missing, extra)
 
-    const getMismatchTypeByKey = key =>
+    const getMismatchTypeByKey = (key: string): string =>
       mismatched.find(m => m.key === key).mismatchType
 
     expect(getMismatchTypeByKey(missing[0])).toBe('missing')

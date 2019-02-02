@@ -1,4 +1,4 @@
-const { readFileSync } = require('fs')
+import { readFileSync } from 'fs'
 
 /**
  * Returns keys & values from the provided env file
@@ -6,7 +6,7 @@ const { readFileSync } = require('fs')
  * @param {String} env Env filepath
  * @returns {Object} An object with key-value pairs.
  */
-const getEnvConfig = env => {
+export const getEnvConfig = (env: string): {} => {
   const fileContent = readFileSync(env, 'utf8')
   const lines = fileContent.split('\n').filter(l => l !== '')
   return lines.reduce((obj, line) => {
@@ -23,7 +23,7 @@ const getEnvConfig = env => {
  * @param {Array} extra Array containing extra keys
  * @returns {Array} Returns an array with objects containing key & mismatchType
  */
-const mismatchedKeys = (missing, extra) => {
+export const mismatchedKeys = (missing: any[], extra: any[]): { key: string, mismatchType: string }[] => {
   const keys = [...missing, ...extra]
   return keys.reduce((array, key) => {
     array.push({
@@ -32,9 +32,4 @@ const mismatchedKeys = (missing, extra) => {
     })
     return array
   }, [])
-}
-
-module.exports = {
-  getEnvConfig,
-  mismatchedKeys,
 }
