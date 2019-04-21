@@ -1,14 +1,13 @@
 module.exports = {
-  "roots": [
-    "<rootDir>/src"
-  ],
   "transform": {
-    "^.+\\.tsx?$": "ts-jest"
+    "^.+\\.ts$": "ts-jest"
   },
-  "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+  "testRegex": "(/__tests__/.*|(\\.|/))\\.ts$",
   "moduleFileExtensions": [
     "ts",
+    "tsx",
     "js",
+    "jsx"
   ],
   watchPlugins: [
     'jest-watch-typeahead/filename',
