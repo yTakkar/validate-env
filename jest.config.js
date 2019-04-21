@@ -14,9 +14,5 @@ module.exports = {
     'jest-watch-typeahead/testname',
   ],
   coverageDirectory: './coverage/',
-  collectCoverage: true,
-  testPathIgnorePatterns: [
-    '/node_modules',
-    '/build'
-  ],
+  collectCoverage: true
 }
