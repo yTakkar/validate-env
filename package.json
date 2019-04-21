@@ -13,7 +13,7 @@
     "lint": "tslint -c ./tslint.json -p . -e '(node_modules|build)'",
     "lint:fix": "tslint -p . --fix",
     "test": "jest",
-    "ci": "NODE_ENV=test yarn lint",
+    "ci": "NODE_ENV=test yarn lint && yarn test",
     "codecov": "codecov",
     "watch-ts": "tsc -w",
     "build-ts": "tsc"
